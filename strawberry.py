@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 detail = sorted(
-    glob.glob("/Users/tlonist/Documents/company/greenlabs-dev/dipe/train/input/*"))
+    glob.glob(_input_path))
 foldername = [str(i.split("/")[0]) + "/" + str(i.split("/")[1]) + "/" + str(i.split("/")[2]) + "/" + str(i.split("/")[3]) + "/" + str(i.split("/")[4]) + "/"
               + str(i.split("/")[5]) + "/" + str(i.split("/")[6]) + "/" + str(i.split("/")[7]) + "/" + str(i.split("/")[8]) for i in detail]
 imagename = [str(i.split("/")[9]) for i in detail]
@@ -182,7 +182,7 @@ gc.collect()
 
 # First of all we will extract the detail of all the data and save all of them in terms of dataframe with foldername and imagename only
 detail = sorted(glob.glob(
-    "/Users/tlonist/Documents/company/greenlabs-dev/dipe/test/nor_fruit/*"))
+    _input_test_path))
 foldername = [str(i.split("/")[0]) + "/" + str(i.split("/")[1]) + "/" + str(i.split("/")[2]) + "/" + str(i.split("/")[3]) + "/" + str(i.split("/")[4]) + "/"
               + str(i.split("/")[5]) + "/" + str(i.split("/")[6]) + "/" + str(i.split("/")[7]) + "/" + str(i.split("/")[8]) for i in detail]
 imagename = [str(i.split("/")[9]) for i in detail]
